@@ -16,6 +16,7 @@
     <!-- indes/show action -->
     <div v-for="movie in movies">
       <h2>Title: {{ movie.title }}</h2>
+      <img v-bind:src="movie.image_url" alt="">
       <h3>Year: {{ movie.year }}</h3>
       <button v-on:click="movie.showExtraInfo = !movie.showExtraInfo">More Info</button>
       <div v-if="movie.showExtraInfo">
@@ -30,15 +31,18 @@
           Plot: <input type="text" v-model="movie.plot"><br>
           English: <input type="text" v-model="movie.english"><br>
           <button v-on:click="updateMovie(movie)">Update</button>
-          <button v-on:click="destroyMovie(movie)">Delete</button>
+          <button v-on:click="destroyMovie(movie)">Delete</button><br><br><br>
         </div>
-      </div>
+      </div><br><br><br><br>
     </div>
 
   </div>
 </template>
 
 <style>
+  img {
+    width: 250px;
+  }
 </style>
 
 <script>
