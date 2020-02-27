@@ -6,6 +6,7 @@
     <h3>Released: {{ movie.year }}</h3>
     <h4>Director: {{ movie.director }}</h4>
     <p>{{ movie.plot }}</p>
+    <router-link v-bind:to="`/movies/${movie.id}/edit`">Edit Movie</router-link>
 
   </div>
 </template>

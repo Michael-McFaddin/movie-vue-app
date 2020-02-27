@@ -1,8 +1,6 @@
 <template>
   <div class="movies-index">
 
-
-    <h1>{{ message }}</h1>
     <div v-for="movie in movies">
       <h2>{{ movie.title }}</h2>
       <router-link :to="`/movies/${movie.id}`">
@@ -22,7 +20,6 @@ import axios from 'axios';
 export default {
   data: function() {
     return {
-      message: "Movies!",
       movies: []
     };
   },
