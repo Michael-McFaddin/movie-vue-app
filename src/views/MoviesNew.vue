@@ -10,19 +10,20 @@
         <div class="form-group">
           <label>Title:</label> 
           <input type="text" class="form-control" v-model="newTitle">
-        </div>
+        </div><br>
         <div class="form-group">
           <label>Year:</label>
           <input type="text" class="form-control" v-model="newYear">
-        </div>
+        </div><br>
         <div class="form-group">
           <label>Director:</label>
           <input type="text" class="form-control" v-model="newDirector">
-        </div>
+        </div><br>
         <div class="form-group">
           <label>Plot:</label>
-          <input type="text" class="form-control" v-model="newPlot">
-        </div>
+          <input type="text" class="form-control" v-model="newPlot"><br>
+          <small v-if="newPlot" v-bind:class="{current: newPlot.length > 20}">Character count {{20 - newPlot.length}}</small>
+        </div><br>
         <div class="form-group">
           <label>Box Cover URL:</label>
           <input type="text" class="form-control" v-model="newImage_url">
@@ -35,6 +36,9 @@
 </template>
 
 <style>
+.current {
+  color: red;
+}
 </style>
 
 <script>
