@@ -2,7 +2,7 @@
 
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
+    <h1>{{ message }}</h1><br><br>
     <!-- create action -->
     <div>
       <h2>New Movie</h2>
@@ -12,7 +12,7 @@
       Plot: <input type="text" v-model="newMoviePlot"><br>
       English: <input type="text" v-model="newMovieEnglish"><br>
       <button v-on:click="createMovie()">Add Movie</button>
-    </div>
+    </div><br><br>
     <!-- indes/show action -->
     <div v-for="movie in movies">
       <h2>Title: {{ movie.title }}</h2>
