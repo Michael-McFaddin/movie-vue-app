@@ -1,7 +1,8 @@
 <template>
   <div class="movies-index">
-
-    <div class="card mb-3" v-for="movie in movies" v-on:click="selectedMovie = movie"  style="max-width: 540px;">
+    
+    <!-- bootstrap cards for each movie -->
+<!--     <div class="card mb-3" v-for="movie in movies" v-on:click="selectedMovie = movie"  style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
           <router-link :to="`/movies/${movie.id}`">
@@ -12,19 +13,19 @@
           <div class="card-body">
             <h5 class="card-title">{{ movie.title }}</h5>
             <p class="card-text">{{ movie.year}}</p>
-            <p class="card-text">Director: {{ movie.director}}</p>
+            <p class="card-text">Director: {{ movie.director}}</p> -->
            <!--  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-          </div>
+  <!--         </div>
         </div>
       </div>
-    </div>
-<!-- 
+    </div> -->
+
     <div v-for="movie in movies" v-on:click="selectedMovie = movie" v-bind:class="{selected: movie === selectedMovie}">
       <h2>{{ movie.title }}</h2>
       <router-link :to="`/movies/${movie.id}`">
         <img v-bind:src="movie.image_url" alt=""><br><br>
       </router-link>
-    </div> -->
+    </div>
 
     <div>
       

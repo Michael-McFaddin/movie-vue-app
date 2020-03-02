@@ -3,8 +3,8 @@ import App from './App.vue';
 import router from './router';
 import axios from 'axios';
 // below, allows bootstrap to be used through the app without using CDN, via NPM
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 
 axios.defaults.baseURL = 
