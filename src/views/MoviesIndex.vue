@@ -1,4 +1,4 @@
-<template>
+<templƒate>
   <div class="movies-index">
     
     <!-- bootstrap cards for each movie -->
@@ -20,16 +20,28 @@
       </div>
     </div> -->
 
-    <div v-for="movie in movies" v-on:click="selectedMovie = movie" v-bind:class="{selected: movie === selectedMovie}">
+<!--     <div v-for="movie in movies" v-on:click="selectedMovie = movie" v-bind:class="{selected: movie === selectedMovie}">
       <h2>{{ movie.title }}</h2>
       <router-link :to="`/movies/${movie.id}`">
         <img v-bind:src="movie.image_url" alt=""><br><br>
       </router-link>
-    </div>
+    </div> -->
 
-    <div>
-      
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div v-for="movie in movies" class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" v-bind:src="movie.image_url" alt="" />
+                        <router-link class="btn hvr-hover" :to="`/movies/${movie.id}`">{{ movie.title }}</router-link>
+                        <!-- <h2>{{ movie.title }}</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- End Categories -->
 
   </div>
 </template>
