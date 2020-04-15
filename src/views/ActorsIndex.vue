@@ -28,6 +28,7 @@ export default {
       .get("/api/actors")
       .then(response => {
         this.actors = response.data;
+        console.log(response.data);
       });
   },
 

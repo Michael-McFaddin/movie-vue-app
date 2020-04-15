@@ -7,8 +7,8 @@
     <h4>Director: {{ movie.director }}</h4>
     <p>{{ movie.plot }}</p><br>
 
-        movies user id {{ movie.user_id }}<br>
-        current user id {{ $parent.getUserId() }}<br>
+        <!-- movies user id {{ movie.user_id }}<br> -->
+        <!-- current user id {{ $parent.getUserId() }}<br> -->
 
     <router-link v-if="movie.user_id == $parent.getUserId()" v-bind:to="`/movies/${movie.id}/edit`">Edit Movie</router-link>
 
