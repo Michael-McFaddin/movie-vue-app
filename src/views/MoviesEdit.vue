@@ -21,7 +21,8 @@
         </div>
         <div class="form-group">
           <label>Plot:</label>
-          <input type="text" class="form-control" v-model="movie.plot">
+          <textarea type="text" class="form-control" v-model="movie.plot">
+        </textarea>
         </div>
         <div class="form-group">
           <label>Box Cover URL:</label>

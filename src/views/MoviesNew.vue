@@ -21,7 +21,7 @@
         </div><br>
         <div class="form-group">
           <label>Plot:</label>
-          <input type="text" class="form-control" v-model="newPlot"><br>
+          <textarea type="text" class="form-control" v-model="newPlot"></textarea><br>
           <small v-if="newPlot" v-bind:class="{current: newPlot.length > 20}">Character count {{20 - newPlot.length}}</small>
         </div><br>
         <div class="form-group">

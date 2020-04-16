@@ -10,7 +10,8 @@
         <!-- movies user id {{ movie.user_id }}<br> -->
         <!-- current user id {{ $parent.getUserId() }}<br> -->
 
-    <router-link v-if="movie.user_id == $parent.getUserId()" v-bind:to="`/movies/${movie.id}/edit`">Edit Movie</router-link>
+    <router-link v-if="movie.user_id == $parent.getUserId()" v-bind:to="`/movies/${movie.id}/edit`"><button>Edit Movie</button></router-link>
+    <br><br>
 
   </div>
 </template>
